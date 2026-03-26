@@ -25,6 +25,13 @@ class SongTile extends StatelessWidget {
         ),
         child: ListTile(
           onTap: onTap,
+          leading: ClipOval(
+            child: Image.network('${song.imageUrl}',
+            width: 45,
+            height: 45,
+            fit: BoxFit.cover,
+            ),
+          ),
           title: Text(song.title),
           trailing: Text(
             isPlaying ? "Playing" : "",
